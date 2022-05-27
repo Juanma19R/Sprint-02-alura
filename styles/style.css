@@ -1,0 +1,141 @@
+/*Defaults*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html{
+    font-family: 'Inter', sans-serif;
+    font-size: 62.5%; 
+}
+body{
+    background: var(--light-primary-color); 
+}
+
+/*Roots*/
+:root{
+    --primary-color: #0a3871;
+    --darker-primary-color: #062d5c;
+    --secondary-color: #b4b4b4;
+    --darker-brown: #3a3632;
+    --light-primary-color: #f3f5fc;
+}
+
+/*Header*/
+header{
+    padding: 40px 84px;
+}
+#logo{
+    width: 31px;
+    height: 48px;
+}
+
+/*Main*/
+main{
+    width: 100%;
+    height: 100vh;
+}
+.main__container{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main__container-start{
+    display: flex;
+    flex-direction: column;
+}
+
+.bg-btn, .sm-btn{
+    display: block;
+}
+.bg-btn{
+    width: 310px;
+    height: 110px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 18px;
+    margin-bottom: 38px;
+    transition: ease-in-out 0.2s;
+}
+.bg-btn:hover{
+    background-color: var(--darker-primary-color);
+}
+.dark{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+}
+.dark:hover{
+    background-color: var(--darker-primary-color);
+}
+.sm-btn{
+    width: 288px;
+    height: 67px;
+    color: var(--primary-color);
+    border-radius: 24px;
+    cursor: pointer;
+    margin: 0 auto;
+    font-size: 1em;
+    transition: ease-in-out 0.2s;
+}
+.sm-btn:hover{
+    background-color: var(--secondary-color);
+}
+.white{
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+.white:hover{
+    background-color: var(--light-primary-color);
+}
+
+/*addWord*/
+.-hide{
+    display: none;
+}
+.addWords__input{
+    margin-bottom: 397px;
+    display: block;
+    font-size: 2em;
+    outline: none;
+    border: none;
+    background-color: var(--light-primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+.addWords__input:focus{
+    border: none;
+}
+.addWords__input::placeholder{
+    color: var(--primary-color);
+}
+.addWords__container-info{
+    color: #495057;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+.addWords__container-info img{
+    margin-right: 8px;
+}
+.addWords__container-info p{
+    margin-right: 1em;
+}
+.addWords__container-buttons{
+    margin-top: 1em;
+}
+.standart-btn{
+    width: 332px;
+    height: 67px;
+    border-radius: 24px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+    margin: 0 14px;
+}
