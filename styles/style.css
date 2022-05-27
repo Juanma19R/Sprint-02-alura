@@ -139,3 +139,64 @@ main{
     transition: 0.3s;
     margin: 0 14px;
 }
+
+/*Game Container*/
+.game__container{
+    max-width: 1200px;
+}
+.game__container-hangman{
+    margin-bottom: 2em;
+}
+.game__container-board{
+    max-width: 1200px;
+    height: 600px;
+    text-align: center;
+}
+.game__container-results{
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.game__wrong-results{
+    text-align: center;
+    font-size: 24px;
+}
+.wrong-words-list{
+    display: inline-flex;
+}
+.wrong-words-list li{
+    padding: 0 12px;
+}
+.game__continer-buttons{
+    text-align: center;
+    margin-top: 3em;
+}
+
+/*Footer*/
+.footer__container{
+    text-align: center;
+    color: var(--darker-brown);
+    padding: 3em;
+}
+.footer__container-socials{
+    margin-top: 1em;
+}
+.footer__icon{
+    text-decoration: none;
+    color: var(--darker-primary-color);
+    padding: 5px;
+}
+.footer__icon:visited{
+    color: var(--darker-primary-color);
+}
+.orange{
+    color: var(--secondary-color);
+}
+.blue{
+    color: #2595ee;
+}
+.red{
+    color: red;
+}
