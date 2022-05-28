@@ -23,56 +23,21 @@
     </header>
 
     <main>
-        <div class="main__container">
-            <div class="main__container-start">
-                <button class="bg-btn dark" id="startGame">Iniciar Juego</button>
-                <button class="sm-btn white" id="addWord">
-                    Agregar nueva palabra
-                </button>
+        <section class="words__container">
+            <canvas width="600" height="600" id="boardHangman" class="hide"></canvas>
+            <label for="addWord"></label>
+            <input type="text" name="newWord" id="inputWord" class="hide" placeholder="Ingrese una palabra">
+            <div class="addWords__container-info">
+                <p id="info"><img src="./assets/icon-warning.svg" alt="Icono de aviso"/> Máx. de 8 letras</p>
             </div>
+        </section>
 
-            <div class="addWords__container hide">
-                <input
-                    class="addWords__input"
-                    name=""
-                    id="inputWord"
-                    maxlength="8"
-                    placeholder="Ingrese una palabra"
-                ></textarea>
-                <div class="addWords__container-info">
-                    <img src="./assets/icon-warning.svg" alt="Icono de aviso" /> 
-                    <p>Máx. de 8 letras</p>
-                </div>
-                <div class="addWords__container-buttons">
-                    <button class="standart-btn dark" id="saveWord">
-                        Guardar y empezar
-                    </button>
-                    <button class="standart-btn white" id="cancelWord">
-                        Cancelar
-                    </button>
-                </div>
-            </div>
-
-            <div class="game__container hide">
-                <div class="game__container-hangman">
-                    <div class="game__container-board">
-                        <canvas width="600" height="600" id="boardHangman"></canvas>
-                    </div>
-                </div>
-                <div class="game__container-guess">
-                    <div class="game__container-results"></div>
-                    <div class="game__wrong-results">
-                        <ul class="wrong-words-list"></ul>
-                    </div>
-                </div>
-                <div class="game__container-buttons">
-                    <button class="standart-btn dark" id="newGame">
-                        Nuevo Juego
-                    </button>
-                    <button class="standart-btn white" id="endGame">Rendirse</button>
-                </div>
-            </div>
-        </div>
+        <section class="buttons__container">
+            <button id="startGame" class="bg-btn">Iniciar juego</button>
+            <button id="addWord" class="sm-btn">Agregar nueva palabra</button>
+            <button id="saveWord" class="bg-btn">Guardar y empezar</button>
+            <button id="cancelWord" class="sm-btn">Cancelar</button>
+        </section>
     </main>
     
     <footer>
@@ -91,5 +56,8 @@
             </div>
         </div>
     </footer>
+
+    <!--Javascript-->
+    <script src="./scripts/app.js"></script>
 </body>
 </html>

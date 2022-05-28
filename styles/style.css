@@ -31,148 +31,26 @@ header{
 }
 
 /*Main*/
-main{
-    width: 100%;
-    height: 100vh;
+.hide{
+    display: none;
 }
-.main__container{
+/*Words Container*/
+.words__container{
     width: inherit;
     height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.main__container-start{
-    display: flex;
-    flex-direction: column;
-}
 
+/*Buttons Container*/
 .bg-btn, .sm-btn{
     display: block;
 }
-.bg-btn{
-    width: 310px;
-    height: 110px;
-    border-radius: 24px;
-    border: none;
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 18px;
-    margin-bottom: 38px;
-    transition: ease-in-out 0.2s;
-}
-.bg-btn:hover{
-    background-color: var(--darker-primary-color);
-}
-.dark{
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-}
-.dark:hover{
-    background-color: var(--darker-primary-color);
-}
-.sm-btn{
-    width: 288px;
-    height: 67px;
-    color: var(--primary-color);
-    border-radius: 24px;
-    cursor: pointer;
-    margin: 0 auto;
-    font-size: 1em;
-    transition: ease-in-out 0.2s;
-}
-.sm-btn:hover{
-    background-color: var(--secondary-color);
-}
-.white{
-    background-color: white;
-    border: 1px solid var(--primary-color);
-    color: var(--primary-color);
-}
-.white:hover{
-    background-color: var(--light-primary-color);
-}
 
-/*addWord*/
-.-hide{
-    display: none;
-}
-.addWords__input{
-    margin-bottom: 397px;
-    display: block;
-    font-size: 2em;
-    outline: none;
-    border: none;
-    background-color: var(--light-primary-color);
-    color: var(--primary-color);
-    background-color: transparent;
-}
-.addWords__input:focus{
-    border: none;
-}
-.addWords__input::placeholder{
-    color: var(--primary-color);
-}
-.addWords__container-info{
-    color: #495057;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-}
-.addWords__container-info img{
-    margin-right: 8px;
-}
-.addWords__container-info p{
-    margin-right: 1em;
-}
-.addWords__container-buttons{
-    margin-top: 1em;
-}
-.standart-btn{
-    width: 332px;
-    height: 67px;
-    border-radius: 24px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: 0.3s;
-    margin: 0 14px;
-}
 
-/*Game Container*/
-.game__container{
-    max-width: 1200px;
-}
-.game__container-hangman{
-    margin-bottom: 2em;
-}
-.game__container-board{
-    max-width: 1200px;
-    height: 600px;
-    text-align: center;
-}
-.game__container-results{
-    display: flex;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 24px;
-}
-.game__wrong-results{
-    text-align: center;
-    font-size: 24px;
-}
-.wrong-words-list{
-    display: inline-flex;
-}
-.wrong-words-list li{
-    padding: 0 12px;
-}
-.game__continer-buttons{
-    text-align: center;
-    margin-top: 3em;
-}
+
+
 
 /*Footer*/
 .footer__container{
@@ -191,12 +69,62 @@ main{
 .footer__icon:visited{
     color: var(--darker-primary-color);
 }
-.orange{
-    color: var(--secondary-color);
+
+#pizarra_ahorcado{
+    margin-left: 25%;
+    background: transparent;
 }
-.blue{
-    color: #2595ee;
+#inputWord{
+    width: 300px;
+	height: 35px;
+    background: transparent;
+    font-family: 'Arial';
+    font-size: 1em;
+    text-align: center;
+    border: 1px solid #0A3871;
+	margin-bottom: 10px;
+    margin-left: 33.3%;
 }
-.red{
-    color: red;
+
+p{
+    position: relative;
+    text-align: center;
+    padding: 15px;
+    color: #0A3871;
+    font-size: 20px; 
+}
+
+.bg-btn{
+    background: var(--primary-color);
+    color: white;
+    width: 319px;
+    height: 110px;
+    border: none;
+    border-radius: 24px;
+    color: #D8DFE8;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 auto;
+    margin-bottom: 38px;
+    transition: ease-in-out 0.2s;
+}
+.bg-btn:hover{
+    background-color: var(--darker-primary-color);
+    color: #fff;
+}
+
+.sm-btn{
+    width: 288px;
+    height: 67px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+    cursor: pointer;
+    background: #D8DFE8;
+    margin: 0 auto;
+    font-size: 16px;
+    transition: ease-in-out 0.2s;
+}
+.sm-btn:hover{
+    background-color: var(--light-primary-color);
 }
