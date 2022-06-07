@@ -12,45 +12,61 @@
     <!--Favicon-->
     <link rel="icon" href="./assets/logo.svg"/>
     <!--CSS-->
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/style.css">
     <title>Ahorcado by Alura</title>
 </head>
 <body>
     <header>
-        <div id="logo">
-            <img src="./assets/logo.svg" alt="Logo de Alura">
-        </div>
+        <a href="index.html"><img id="icon" src="./assets/logo.svg" alt="Logo de Alura" title="alura"/></a>
     </header>
 
-    <main>
-        <section class="words__container">
-            <canvas width="600" height="600" id="boardHangman" class="hide"></canvas>
-            <label for="addWord"></label>
-            <input type="text" name="newWord" id="inputWord" class="hide" placeholder="Ingrese una palabra">
-            <div class="addWords__container-info">
-                <p id="info"><img src="./assets/icon-warning.svg" alt="Icono de aviso"/> Máx. de 8 letras</p>
-            </div>
-        </section>
-
-        <section class="buttons__container">
-            <button id="startGame" class="bg-btn">Iniciar juego</button>
-            <button id="addWord" class="sm-btn">Agregar nueva palabra</button>
-            <button id="saveWord" class="bg-btn">Guardar y empezar</button>
-            <button id="cancelWord" class="sm-btn">Cancelar</button>
-        </section>
+    <main id="menu__container">
+        <button  id="start" class="buttons">Iniciar juego</button>
+        <button  id="addWord" class="buttons">Agregar nueva palabra</button>
     </main>
+
+    <section id="activateGame__container">
+        <div id="game">
+            <div id="startCanvas"><canvas id="board" width="250" height="350"></canvas></div>
+            <div id="message"></div>
+        </div>
+
+        <div id="secretWord"></div>
+        <div>
+            <textarea id="wrongText" class="text" spellcheck="false" readonly="true"></textarea>
+        </div>
+        
+        <div>
+            <button  id="newGame" class="buttons">Nuevo juego</button>
+            <button  id="desist" class="buttons">Desistir</button>
+        </div>
+    </section>
+
+    <section id="addWordMenu__container">
+        <textarea id="text" spellcheck="false" placeholder="Ingrese una palabra" rows="7" cols="50"></textarea>
+        <div>
+            <div id="exclamation">
+                <p><img src="./assets/icon-warning.svg"/> Máx. de 8 letras</p>
+            </div>
+            <div id="btn-start">
+                <button id="left" class="buttons">Guardar y empezar</button>
+                <button id="right" class="buttons">Cancelar</button>
+            </div>
+        </div>
+    </section>
     
     <footer>
         <div class="footer__container">
             <p>© 2022 - Ruggeri Juan Manuel</p>
             <div class="footer__container-socials">
-                <a href="https://github.com/Juanma19R" class="footer__icon"
+                <a href="https://github.com/Juanma19R" target="_blank" class="footer__icon"
                 ><i class="fa-brands fa-github fa-2xl"></i
                 ></a>
-                <a href="https://www.linkedin.com/in/juan-manuel-ruggeri/" class="footer__icon"
+                <a href="https://www.linkedin.com/in/juan-manuel-ruggeri/" target="_blank" class="footer__icon"
                 ><i class="fa-brands fa-linkedin fa-2xl"></i
                 ></a>
-                <a href="https://twitter.com/Juanma_s8" class="footer__icon"
+                <a href="https://twitter.com/Juanma_s8" target="_blank" class="footer__icon"
                 ><i class="fa-brands fa-twitter fa-2xl"></i
                 ></a>
             </div>
@@ -58,6 +74,9 @@
     </footer>
 
     <!--Javascript-->
-    <script src="./scripts/app.js"></script>
+    <script src="./scripts/canvas.js"></script>
+    <script src="./scripts/keyboard_event.js"></script>
+    <script src="./scripts/hide.js"></script>
+    <script src="./scripts/clean_attributes.js"></script>
 </body>
 </html>
