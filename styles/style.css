@@ -152,7 +152,7 @@ div{
 /*Footer*/
 .footer__container{
     text-align: center;
-    color: var(--darker-brown);
+    color: #0A3871;
     padding: 3em;
 }
 .footer__container-socials{
@@ -160,9 +160,9 @@ div{
 }
 .footer__icon{
     text-decoration: none;
-    color: var(--darker-primary-color);
+    color: #0A3871;
     padding: 5px;
 }
 .footer__icon:visited{
-    color: var(--darker-primary-color);
+    color: #0A3871;
 }
